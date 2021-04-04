@@ -5,7 +5,6 @@
   "main": "app/app.js",
   "scripts": {
     "build": "tsc & webpack build --config internals/webpack/webpack.prod.config.js",
-    "dev": "webpack serve --config internals/webpack/webpack.dev.config.js --progress --watch --content-base build/",
     "start": "node server.js",
     "start:dev": "nodemon",
     "generate": "plop --plopfile internals/generators/index.js",
@@ -22,6 +21,7 @@
     "compression": "^1.7.4",
     "connected-react-router": "^6.8.0",
     "css-loader": "^5.0.1",
+    "dotenv": "^8.2.0",
     "eslint": "^7.18.0",
     "express": "^4.17.1",
     "history": "^5.0.0",
@@ -43,6 +43,7 @@
     "reselect": "^4.0.0",
     "sass-loader": "^10.1.1",
     "style-loader": "^2.0.0",
+    "ts-node": "^9.1.1",
     "webpack": "^5.16.0",
     "webpack-cli": "^4.4.0",
     "webpack-dev-middleware": "^4.1.0",
@@ -55,6 +56,7 @@
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "babel-loader": "^8.2.2",
     "cross-env": "^7.0.3",
+    "nodemon": "^2.0.7",
     "plop": "^2.7.4",
     "prettify": "^0.1.7"
   },
@@ -63,9 +65,7 @@
     "ts-node": {
       "files": true
     },
-    "files": [
-      "server/utils/types/*.d.ts"
-    ],
+    "files": [],
     "ignore": [
       ".git",
       "node_modules/**/node_modules"
